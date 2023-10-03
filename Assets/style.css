@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/* Declaring Variables */
 :root {
     --margin-top: 20px;
     --bg: #800080;
@@ -16,9 +17,10 @@ section {
     justify-content: space-between;
 }
 
-h4:nth-child(1) {
+a {
     position: relative;
     left: 10px;
+    text-decoration: none;
 }
 
 h4:nth-child(2) {
@@ -26,6 +28,7 @@ h4:nth-child(2) {
     right: 10px;
 }
 
+/* Start of main Section styles */
 main {
     position: relative;
     top: 100px;
