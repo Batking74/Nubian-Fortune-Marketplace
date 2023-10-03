@@ -12,4 +12,4 @@
 
 Deployed Site:
 
-GitHub Repo: 
+GitHub Repo: https://github.com/Batking74/Coding-Quiz
