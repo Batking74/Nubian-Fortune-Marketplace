@@ -10,6 +10,6 @@
 - JavaScript
 
 
-Deployed Site:
+Deployed Site: https://batking74.github.io/Coding-Quiz/
 
 GitHub Repo: https://github.com/Batking74/Coding-Quiz
