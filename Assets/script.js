@@ -3,6 +3,7 @@ const counter = document.querySelector('#countDown');
 const completeContainer = document.querySelector('#complete');
 const messageContainer = document.querySelector('#message');
 const userInitials = document.getElementsByTagName('input');
+const link = document.getElementsByTagName('a')[0].addEventListener('click', displayOldResults);
 const h1 = document.querySelector('h1');
 const label = document.getElementsByTagName('label');
 const pElemnt = document.querySelectorAll('p');
@@ -69,6 +70,7 @@ function displayNewPage() {
 
 // Starting the timer, and then starts the quiz
 function startTimer() {
+    removeOldLogs();
     pElemnt[0].style.display = noDisplay;
     mainContainer.children[3].style.display = noDisplay;
     counter.textContent = 75;
@@ -165,7 +167,6 @@ function isValid(usersAnswer, correctAnswer, btns) {
 function endQuiz() {
     for(let i = 4; i < mainContainer.children.length; i++) mainContainer.children[i].remove();
     const counterContainer = counter.parentElement;
-    console.log(counter)
     const userScore = counter.parentElement.textContent;
     counterContainer.textContent = userScore;
     displayNewContent(4, noDisplay, 3, 'inline');
@@ -180,22 +181,46 @@ function endQuiz() {
 
 // Displays Quiz Results
 function showResults() {
+    const logID = localStorage.length + 1;
     h1.textContent = 'Highscores';
     displayNewContent(4, displayContent, 3, displayContent);
     mainContainer.children[2].children[2].textContent = 'Go Back';
     mainContainer.children[3].textContent = 'Clear Highscores';
     userInitials[0].style.display = displayContent;
-    userInitials[0].style.width = '100px';
+    userInitials[0].style.width = '300px';
     userInitials[0].disabled = true;
-    userInitials[0].value = `1.${userInitials[0].value.toUpperCase()}-${document.body.children[0].children[1].textContent.substring(5)}`
+    userInitials[0].value = `${logID}.${userInitials[0].value.toUpperCase()}-${document.body.children[0].children[1].textContent.substring(5)}`
+    localStorage.setItem(logID, userInitials[0].value);
     label[0].remove();
     pElemnt[0].remove();
     mainContainer.children[2].addEventListener('click', () => {
-        if(userInitials[0] != undefined) userInitials[0].remove();
+        if(userInitials[0] != undefined) {
+            userInitials[0].remove();
+            localStorage.removeItem(logID);
+        }
     });
 }
 
 function displayNewContent(index1, value1, index2, value2) {
     mainContainer.children[index1].style.display = value1;
     mainContainer.children[index2].style.display = value2;
+}
+
+function displayOldResults() {
+    for(let i = 0; i < localStorage.length; i++) {
+        const container = document.createElement('div');
+        const pElements = document.createElement('div');
+        pElements.textContent = localStorage.getItem(localStorage.key(i))
+        container.setAttribute('id', 'displayedLog');
+        container.append(pElements);
+        mainContainer.append(container);
+    }
+}
+
+function removeOldLogs() {
+    for(let element of mainContainer.children) {
+        if(element.id === 'displayedLog') {
+            element.style.display = noDisplay;
+        }
+    }
 }
