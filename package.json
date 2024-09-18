@@ -1,0 +1,17 @@
+{
+  "name": "nubian-fortune-marketplace",
+  "version": "1.0.0",
+  "description": "Nazir's Nubian Fortune Marketplace Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm i && concurrently \"cd client && npm run dev\" \"cd server && npm run dev\"",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
