@@ -1,6 +1,6 @@
 @import './Mixins'
 
-header
+nav
     position: fixed
     width: 100%
     top: 0
@@ -20,7 +20,7 @@ header
         box-shadow: 0 0 10px rgb(0 0 0 / 10%)
     .logo
         img
-            max-width: 120px
+            max-width: 100px
             height: auto
     .navmenu
         display: flex
@@ -39,7 +39,7 @@ header
             &.open
                 right: 0
         a
-            color: $text-color2
+            color: $text-color
             font-size: 16px
             text-transform: capitalize
             padding: 10px 20px
@@ -49,27 +49,26 @@ header
                 display: block
                 margin: 18px 0
             &:hover
-                color: $text-color
+                color: $main-color
     .nav-icon
         display: flex
         align-items: center
         i
             margin-right: 20px
-            color: $text-color2
+            color: $text-color
             font-size: 25px
             font-weight: 400
             transition: all .42s ease
             &:hover
-                color: $text-color
+                color: $main-color
         #menu-icon
             font-size: 35px
-            color: $text-color2
+            color: $text-color
             z-index: 10001
             display: none
             cursor: pointer
             @include mediaQuery(750px)
                 display: block
-            
 
-section
+section, footer
     padding: 5% 10%

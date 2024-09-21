@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 export default function ContactComponent() {
     return (
-        <section className="contact">
+        <footer>
             <div className="contact-info">
                 <div className="first-info">
-                    <img src="/images/1.webp" alt="" />
+                    <img src="/images/Batking-Logo.webp" alt="Logo" />
                     <p>3245 Grant Street Longview, <br /> TX united kingdom 765378</p>
                     <p>024857574848</p>
                     <p>chicken3080@gmail.com</p>
                     <div className="social-icons">
-                        <Link to='#'><i class='bx bxl-facebook' ></i></Link>
-                        <Link to='#'><i class='bx bxl-twitter' ></i></Link>
-                        <Link to='#'><i class='bx bxl-instagram' ></i></Link>
-                        <Link to='#'><i class='bx bxl-youtube' ></i></Link>
-                        <Link to='#'><i class='bx bxl-linkedin' ></i></Link>
+                        <Link to='#'><i className='bx bxl-facebook' ></i></Link>
+                        <Link to='#'><i className='bx bxl-twitter' ></i></Link>
+                        <Link to='#'><i className='bx bxl-instagram' ></i></Link>
+                        <Link to='#'><i className='bx bxl-youtube' ></i></Link>
+                        <Link to='#'><i className='bx bxl-linkedin' ></i></Link>
                     </div>
                 </div>
                 <div className="second-info">
@@ -48,6 +48,6 @@ export default function ContactComponent() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ad?</p>
                 </div>
             </div>
-        </section>
-    )
+        </footer>
+    );
 }

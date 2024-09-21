@@ -67,12 +67,15 @@ const products = [
         MaxPrice: 129
     }
 ];
+const categories = ['Category', 'Category', 'Category', 'Category', 'Category', 'Category', 'Category', 'Category', 'Category', 'Category', 'Category', ]
 
-export default function TrendingProductsComponent() {
+export default function StorePageComponent() {
     return (
-        <section id="Trending-Products" className="Trending-Products">
-            <div className="center-text">
-                <h2>Our trending <span>Products</span></h2>
+        <section id="Store-Section" className="Store-Section">
+            <div className="Category-Filters">
+                <select name="Category-Filter" id="Category-Filter">
+                    {categories.map((categoryName, i) => <option key={i + 1}>{categoryName}{i}</option>)}
+                </select>
             </div>
             <div className="Products-Container">
                 {

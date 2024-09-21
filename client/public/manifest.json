@@ -1,0 +1,60 @@
+{
+    "name": "Nubian Fortune Marketplace",
+    "short_name": "Nubian Fortune",
+    "start_url": "/",
+    "id": "/",
+    "display": "standalone",
+    "description": "Nubian Fortune Marketplace",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_72X72.png",
+            "type": "image/png",
+            "sizes": "72x72",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_96X96.png",
+            "type": "image/png",
+            "sizes": "96x96",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_128X128.png",
+            "type": "image/png",
+            "sizes": "128x128",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_144X144.png",
+            "type": "image/png",
+            "sizes": "144x144",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_152X152.png",
+            "type": "image/png",
+            "sizes": "152x152",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_192X192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_384X384.png",
+            "type": "image/png",
+            "sizes": "384x384",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/manifest_Icons/Nubian_Fortune_Icon_512X512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

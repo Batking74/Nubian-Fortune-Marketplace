@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
+    font-family: "Lora", serif
 }
 
 
@@ -13,4 +14,5 @@
 @import './HomePage/TrendingProductsComponent.sass';
 @import './HomePage/ClientReviewsComponent.sass';
 @import './HomePage/UpdateNewsComponent.sass';
-@import './HomePage/ContactComponent.sass';
+@import './StorePage/StorePage.sass';
+@import './FooterComponent.sass';

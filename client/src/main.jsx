@@ -1,5 +1,7 @@
 // Importing Modules/Packages
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { registerServiceWorker } from './helpers/helpers.js';
+import StorePageComponent from './pages/StorePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import { createRoot } from 'react-dom/client';
 import HomePage from './pages/HomePage.jsx';
@@ -18,10 +20,16 @@ const router = createBrowserRouter([{
       element: <HomePage />
     },
     {
-      path: '/Products/:id',
+      path: '/Store',
+      element: <StorePageComponent />
+    },
+    {
+      path: '/Store/:id',
       element: <ProductsPage />
     },
   ]
 }]);
+
+registerServiceWorker();
 
 createRoot(document.getElementById('root')).render(<RouterProvider router={router} />);
