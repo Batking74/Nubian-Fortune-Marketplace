@@ -14,6 +14,6 @@
 
 
 
-Deployed Site:
+Deployed Site: https://nubian-fortune-marketplace.onrender.com
 
 GitHub Repo: https://github.com/Batking74/Nubian-Fortune-Marketplace
