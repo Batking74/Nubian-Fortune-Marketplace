@@ -2,7 +2,7 @@
 
 ### Description
 
-![Image of Nazir's Nubian Fortune Marketplace Project]()
+![Image of Nazir's Nubian Fortune Marketplace Project](./Nubian%20Fortune%20Marketplace%20-%209_21_2024.webp)
 
 ## Technologies Used
 - HTML
