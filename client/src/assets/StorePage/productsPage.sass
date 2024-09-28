@@ -1,0 +1,158 @@
+@import '../Mixins'
+$breakpoint: 1200px
+
+.card-wrapper
+    line-height: 1.5
+    max-width: 1200px
+    margin: 0 auto
+    margin-bottom: 100px
+    margin-top: 150px
+    @include minMediaQuery($breakpoint)
+        display: flex
+        justify-content: center
+        align-items: center
+    img
+        width: 100%
+        display: block
+    .card
+        @include minMediaQuery($breakpoint)
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 1.5rem
+        .product-imgs
+            @include minMediaQuery($breakpoint)
+                display: flex
+                flex-direction: column
+                justify-content: center
+            .img-display
+                overflow: hidden
+                .img-showcase
+                    display: flex
+                    width: 100%
+                    transition: all 0.5s ease
+                    img
+                        min-width: 100%
+            .img-select
+                display: flex
+                .img-item
+                    background: #000
+                    padding: 5px
+                    margin: 0.3rem
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+                        margin-right: 0
+                    &:hover
+                        opacity: 0.8
+                    // img
+                    //     min-height: 100%
+        .product-content
+            padding: 2rem 1rem
+            @include minMediaQuery($breakpoint)
+                padding-top: 0
+            .product-title
+                font-size: 2.5rem
+                text-transform: capitalize
+                font-weight: 700
+                position: relative
+                color: #12263a
+                margin: 1rem 0
+                @include mediaQuery(600px)
+                    font-size: 2rem
+                
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    height: 4px
+                    width: 80px
+                    background: #12263a
+            .product-link
+                text-decoration: none
+                text-transform: uppercase
+                font-weight: 400
+                font-size: 0.9rem
+                display: inline-block
+                margin-bottom: 0.5rem
+                background: #256eff
+                color: #fff
+                padding: 0 0.3rem
+                transition: all 0.5s ease
+                &:hover
+                    opacity: 0.9
+            .product-rating
+                color: #ffc107
+                span
+                    font-weight: 600
+                    color: #252525
+            .product-price
+                margin: 1rem 0
+                font-size: 1rem
+                font-weight: 700
+                .last-price
+                    span
+                        font-weight: 400
+                        color: #f64749
+                        text-decoration: line-through
+                .new-price
+                    span
+                        color: #256eff
+            .product-details
+                h2
+                    text-transform: capitalize
+                    color: #12263a
+                    padding-bottom: 0.6rem
+                p
+                    font-size: 0.9rem
+                    padding: 0.3rem
+                    opacity: 0.8
+                ul
+                    margin: 1rem 0
+                    font-size: 0.9rem
+                    li
+                        margin: 0
+                        list-style: none
+                        font-weight: 600
+                        opacity: 0.9
+                        span
+                            font-weight: 400
+            .purchase-info
+                margin: 1.5px 0
+                input, .btn
+                    border: 1.5px solid #ddd
+                    border-radius: 25px
+                    text-align: center
+                    padding: 0.45rem 0.8rem
+                    outline: 0
+                    margin-right: 0.2rem
+                    margin-bottom: 1rem
+                input
+                    width: 60px
+                .btn
+                    cursor: pointer
+                    color: #fff
+                    &:first-of-type
+                        background: #256eff
+                    &:last-of-type
+                        background: #f64749
+                    &:hover
+                        opacity: 0.9
+            .social-links
+                display: flex
+                align-items: center
+                a
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 32px
+                    height: 32px
+                    color: #000
+                    border: 1px solid #000
+                    margin: 0 0.2rem
+                    border-radius: 50%
+                    text-decoration: none
+                    font-size: 0.8rem
+                    transition: all 0.5s ease
+                    &:hover
+                        background: #000
+                        border-color: transparent
+                        color: #fff

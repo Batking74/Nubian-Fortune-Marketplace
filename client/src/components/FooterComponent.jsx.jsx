@@ -1,12 +1,13 @@
 // Importing Modules/Packages
 import { Link } from "react-router-dom";
+import { dirs } from "../helpers/helpers";
 
 export default function ContactComponent() {
     return (
         <footer>
             <div className="contact-info">
                 <div className="first-info">
-                    <img src="/images/Batking-Logo.webp" alt="Logo" />
+                    <img src={`${dirs.ProductsDir}/Batking-Logo.webp`} alt="Batking Logo" />
                     <p>3245 Grant Street Longview, <br /> TX united kingdom 765378</p>
                     <p>024857574848</p>
                     <p>chicken3080@gmail.com</p>

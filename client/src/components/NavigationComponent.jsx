@@ -1,4 +1,5 @@
 // Importing Modules/Packages
+import { dirs } from "../helpers/helpers";
 import { Link } from "react-router-dom";
 
 export default function NavigationComponent() {
@@ -8,12 +9,12 @@ export default function NavigationComponent() {
         navmenu.classList.toggle('open');
     }
     window.addEventListener('scroll', function () {
-        const header = document.querySelector('nav');
-        header.classList.toggle('sticky', this.window.scrollY > 0)
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('sticky', this.window.scrollY > 0);
     });
     return (
         <nav>
-            <Link to='/' className="logo"><img src="/images/Nubian-Fortune-Logo.webp" alt="logo" /></Link>
+            <Link to='/' className="logo"><img src={`${dirs.ProductsDir}/Nubian-Fortune-Logo.webp`} alt="Nubian Fortune Logo" /></Link>
             <ul className="navmenu">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/Store'>Shop</Link></li>
