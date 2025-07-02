@@ -1,0 +1,16 @@
+.vscode
+README.md
+node_modules
+package-lock.json
+Nubian Fortune Marketplace - 9_21_2024.webp
+
+# Client
+client/*
+!client/public/
+!client/dist/
+
+# Server
+/server/.env.me
+/server/.env.previous
+/server/node_modules
+/server/package-lock.json

@@ -1,14 +1,25 @@
 // Importing Modules/Packages
-import { dirs, products } from "../helpers/helpers";
-import React, { useEffect, useState } from "react";
+import { dirs, products, cartItems } from "../helpers/helpers";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function ProductsPage() {
+    const [ProductID, SetProductID] = useState(null);
     const [ID, setID] = useState(null);
 
     const updateQuantity = () => {
 
     }
+
+    const addToCart = (e) => {
+        let positionOfItemInCart = cartItems.findIndex((obj) => obj.ProductID == ProductID);
+
+        // Add the item to the cart if the cart is empty, or if the item is not already in the cart.
+        if (cartItems.length <= 0 || positionOfItemInCart < 0) cartItems.push({ ProductID, Quantity: 1 });
+        // If the item is already in the cart, increase its quantity.
+        else cartItems[positionOfItemInCart].Quantity++;
+    }
+
     const test = (e) => {
         e.preventDefault();
         const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth
@@ -19,11 +30,12 @@ export default function ProductsPage() {
         const decimalPercentage = (wholePercentage / 100).toFixed(2);
         const percentageAmount = price * decimalPercentage;
         const newDiscountedPrice = price - percentageAmount;
-        return[newDiscountedPrice.toFixed(2), `${percentageAmount.toFixed(2)} (${wholePercentage}% OFF)`];
+        return [newDiscountedPrice.toFixed(2), `${percentageAmount.toFixed(2)} (${wholePercentage}% OFF)`];
     }
 
     useEffect(() => {
         const productID = parseInt(window.location.pathname.split(':')[1].replace('/', ''));
+        SetProductID(productID);
         setID(productID - 1);
     }, []);
 
@@ -33,10 +45,10 @@ export default function ProductsPage() {
                 <div className="product-imgs">
                     <div className="img-display">
                         <div className="img-showcase">
-                        {
-                            ID != null ?
-                                products[ID].ProductImages.map((img, i) => <img key={i} src={`${dirs.ProductsDir}${img}`} alt={products[ID].ProductName} />) : null
-                        }
+                            {
+                                ID != null ?
+                                    products[ID].ProductImages.map((img, i) => <img key={i} src={`${dirs.ProductsDir}${img}`} alt={products[ID].ProductName} />) : null
+                            }
                             {ID != null ? <img src={`${dirs.ProductsDir}${products[ID].ProductImages[0]}`} alt={products[ID].ProductName} /> : null}
                             {ID != null ? <img src={`${dirs.ProductsDir}${products[ID].ProductImages[0]}`} alt={products[ID].ProductName} /> : null}
                         </div>
@@ -124,7 +136,7 @@ export default function ProductsPage() {
                     </div>
                     <div className="purchase-info">
                         <input onChange={updateQuantity} type="number" min={0} value={1} />
-                        <button type="button" className="btn">Add to Cart <i className='fas fa-shopping-cart'></i></button>
+                        <button onClick={addToCart} type="button" className="btn">Add to Cart <i className='fas fa-shopping-cart'></i></button>
                         <button type="button" className="btn">Add to Wishlist</button>
                     </div>
                     <div className="social-links">

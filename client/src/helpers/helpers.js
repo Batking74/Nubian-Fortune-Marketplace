@@ -172,6 +172,8 @@ export const products = [
     }
 ];
 
+export const cartItems = [];
+
 // Registering Service Worker for PWA
 export async function registerServiceWorker() {
     if ('serviceWorker' in navigator) {

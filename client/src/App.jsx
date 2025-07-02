@@ -1,4 +1,5 @@
 // Importing Modules/Packages
+import SideListItemComponent from './components/SideListItemComponent.jsx';
 import NavigationComponent from './components/NavigationComponent';
 import FooterComponent from './components/FooterComponent.jsx';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -12,12 +13,10 @@ export default function App() {
   // Returning Components/JSX
   return (
     <React.Fragment>
+      <SideListItemComponent />
       <NavigationComponent />
       <Outlet />
       <FooterComponent />
-      <div className="end-text">
-        <p>Copyright <i className='bx bx-copyright'></i> 2024. All Rights Reserved. | Designed By Saidul Islam and GeekProbin | Developed by Nazir Knuckles</p>
-      </div>
     </React.Fragment>
   )
 }

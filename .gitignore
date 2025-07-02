@@ -24,3 +24,8 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+.env.me
+.env.previous
+.flaskenv*
+!.env.project
+!.env.vault
