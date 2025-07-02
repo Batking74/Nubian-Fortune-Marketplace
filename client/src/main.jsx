@@ -1,7 +1,6 @@
 // Importing Modules/Packages
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import OrderConfirmedPage from './pages/OrderConfirmedPage.jsx';
-import OrderCanceledPage from './pages/OrderCanceledPage.jsx';
 import { registerServiceWorker } from './helpers/helpers.js';
 import StorePageComponent from './pages/StorePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
@@ -32,11 +31,7 @@ const router = createBrowserRouter([{
     {
       path: '/Order-Confirmed',
       element: <OrderConfirmedPage />
-    },
-    {
-      path: '/Order-Canceled',
-      element: <OrderCanceledPage />
-    },
+    }
   ]
 }]);
 

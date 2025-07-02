@@ -4,8 +4,10 @@ import { useState } from "react";
 
 export default function SideListItemComponent() {
     const checkout = async () => {
+        let hostname = 'https://nubianfortune.nazirsportfolio.com';
+        if (location.hostname === 'localhost') hostname = 'http://localhost:7000';
         try {
-            const res = await fetch('http://localhost:5000/Checkout', {
+            const res = await fetch(`${hostname}/Checkout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ cartItems, OriginPage: window.location.href })

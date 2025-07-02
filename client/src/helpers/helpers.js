@@ -1,6 +1,9 @@
+export const domainURL = 'https://nubianfortune.nazirsportfolio.com';
+
 export const dirs = {
-    ProductsDir: '/images'
+    ProductsDir: `${domainURL}/images`
 }
+
 export const products = [
     {
         id: 1,
