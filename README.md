@@ -1,28 +1,23 @@
 # Nubian Fortune Marketplace
 
-### Description
+## Description
 
 ![Image of Nazir's Nubian Fortune Marketplace Project](./Nubian%20Fortune%20Marketplace%20-%209_21_2024.webp)
 
-## Technologies AND Tools Used
+## Technologies and Tools Used
 - HTML
-- CSS
 - Sass/Scss
+- React/Vite
 - Javascript
-- React
-- Vite
-- Express
-- Node.js
-- Mongoose (ODM)
+- Node.js/Express
 - GraphQL
-- MongoDB
-- Stripe
-- Linux (Ubuntu)
-- Cloudflare CDN
+- MongoDB/Mongoose (ODM)
+- Docker
 - Nginx
+- Stripe`
+- Cloudflare CDN
+- Linode/Linux (Ubuntu)
 - Progressive Web App (PWA)
-
-
 
 Deployed Site: https://nubianfortune.nazirsportfolio.com
 
