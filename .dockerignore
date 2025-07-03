@@ -1,7 +1,12 @@
+.git
 .vscode
 README.md
+Dockerfile
+.gitignore
 node_modules
+.dockerignore
 package-lock.json
+docker-compose.yaml
 Nubian Fortune Marketplace - 9_21_2024.webp
 
 # Client
@@ -11,6 +16,7 @@ client/*
 
 # Server
 /server/.env.me
+/server/.env.vault
 /server/.env.previous
 /server/node_modules
 /server/package-lock.json
